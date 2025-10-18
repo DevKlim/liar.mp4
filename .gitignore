@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Data - Ignore large data files from git tracking
+data/videos/*
+data/processed/*
+# Keep the .gitkeep files to preserve directory structure
+!data/**/.gitkeep
+
+# IDEs and editors
+.idea/
+.vscode/
+*.swp
+*~
+
+# Environment variables
+.env

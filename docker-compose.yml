@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  analyzer:
+    build: .
+    container_name: video_analyzer_service
+    
+    # Mount volumes for live code updates and data persistence
+    volumes:
+      - ./data:/app/data
+      - ./src:/app/src
+      - ./main.py:/app/main.py
+
+    # Keep the service running to execute commands
+    command: tail -f /dev/null
+
+    # Uncomment to use a .env file for secrets like API keys
+    # env_file:
+    #   - .env
